@@ -1,0 +1,38 @@
+body {
+  background-color: black;
+}
+
+h1,
+h4 {
+  text-align: center;
+  color: white;
+}
+
+.map {
+  display: flex;
+  justify-content: center;
+}
+
+#legend {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 300px;
+  border: 1px solid white;
+  padding: 5px;
+  margin: 20px auto;
+}
+
+.legend-item {
+  margin-bottom: 5px;
+  border: 2px solid white;
+  margin: 2px;
+}
+
+.legend-color {
+  display: inline-block;
+  width: 20px;
+  height: 10px;
+  margin-right: 5px;
+}
