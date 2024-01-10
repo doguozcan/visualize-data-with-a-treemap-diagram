@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import VideoGame from "./pages/videogame";
 import Movie from "./pages/movie";
 import Kickstarter from "./pages/kickstarter";
@@ -7,7 +7,7 @@ import Header from "./Header";
 
 function App() {
   return (
-    <Router basename="/visualize-data-with-a-treemap-diagram">
+    <Router>
       <div>
         <Header />
         <Switch>
