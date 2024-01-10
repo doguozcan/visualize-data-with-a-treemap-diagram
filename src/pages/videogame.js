@@ -6,12 +6,14 @@ function VideoGame() {
   const [videoGames, setVideoGames] = useState(null);
 
   useEffect(() => {
-    const videoGamesURL =
-      "https://cdn.freecodecamp.org/testable-projects-fcc/data/tree_map/video-game-sales-data.json";
+    if (!videoGames) {
+      const videoGamesURL =
+        "https://cdn.freecodecamp.org/testable-projects-fcc/data/tree_map/video-game-sales-data.json";
 
-    d3.json(videoGamesURL).then((videosData) => {
-      setVideoGames(videosData);
-    });
+      d3.json(videoGamesURL).then((videosData) => {
+        setVideoGames(videosData);
+      });
+    }
   }, []);
 
   useEffect(() => {

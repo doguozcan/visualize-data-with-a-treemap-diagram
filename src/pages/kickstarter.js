@@ -6,12 +6,14 @@ function Kickstarter() {
   const [kickstarters, setKickstarters] = useState(null);
 
   useEffect(() => {
-    const kickstartersURL =
-      "https://cdn.freecodecamp.org/testable-projects-fcc/data/tree_map/kickstarter-funding-data.json";
+    if (!kickstarters) {
+      const kickstartersURL =
+        "https://cdn.freecodecamp.org/testable-projects-fcc/data/tree_map/kickstarter-funding-data.json";
 
-    d3.json(kickstartersURL).then((kickstarterData) => {
-      setKickstarters(kickstarterData);
-    });
+      d3.json(kickstartersURL).then((kickstarterData) => {
+        setKickstarters(kickstarterData);
+      });
+    }
   }, []);
 
   useEffect(() => {

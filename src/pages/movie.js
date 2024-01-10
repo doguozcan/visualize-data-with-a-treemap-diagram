@@ -6,12 +6,14 @@ function Movie() {
   const [movies, setMovies] = useState(null);
 
   useEffect(() => {
-    const moviesURL =
-      "https://cdn.freecodecamp.org/testable-projects-fcc/data/tree_map/movie-data.json";
+    if (!movies) {
+      const moviesURL =
+        "https://cdn.freecodecamp.org/testable-projects-fcc/data/tree_map/movie-data.json";
 
-    d3.json(moviesURL).then((moviesData) => {
-      setMovies(moviesData);
-    });
+      d3.json(moviesURL).then((moviesData) => {
+        setMovies(moviesData);
+      });
+    }
   }, []);
 
   useEffect(() => {

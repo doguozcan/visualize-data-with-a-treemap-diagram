@@ -7,7 +7,7 @@ import Header from "./Header";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/visualize-data-with-a-treemap-diagram">
       <div>
         <Header />
         <Routes>
